@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/lxzan/gws"
+	"github.com/marifcelik/gws"
 )
 
 const remoteAddr = "127.0.0.1:9001"

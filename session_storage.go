@@ -4,7 +4,7 @@ import (
 	"sync"
 
 	"github.com/dolthub/maphash"
-	"github.com/lxzan/gws/internal"
+	"github.com/marifcelik/gws/internal"
 )
 
 type SessionStorage interface {

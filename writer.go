@@ -7,7 +7,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/lxzan/gws/internal"
+	"github.com/marifcelik/gws/internal"
 )
 
 // WriteClose 发送关闭帧, 主动断开连接

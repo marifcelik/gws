@@ -9,11 +9,11 @@
 
 [![awesome](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/avelino/awesome-go#networking)
 [![codecov](https://codecov.io/gh/lxzan/gws/graph/badge.svg?token=DJU7YXWN05)](https://codecov.io/gh/lxzan/gws)
-[![Go Test](https://github.com/lxzan/gws/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/lxzan/gws/actions/workflows/go.yml)
-[![go-reportcard](https://goreportcard.com/badge/github.com/lxzan/gws)](https://goreportcard.com/report/github.com/lxzan/gws)
+[![Go Test](https://github.com/marifcelik/gws/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/marifcelik/gws/actions/workflows/go.yml)
+[![go-reportcard](https://goreportcard.com/badge/github.com/marifcelik/gws)](https://goreportcard.com/report/github.com/marifcelik/gws)
 [![HelloGithub](https://api.hellogithub.com/v1/widgets/recommend.svg?rid=268cee8eb54b4a7189d38fb12f165177&claim_uid=TeObZoJ8pgUvBWf&theme=small)](https://hellogithub.com/repository/268cee8eb54b4a7189d38fb12f165177)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![go-version](https://img.shields.io/badge/go-%3E%3D1.18-30dff3?style=flat-square&logo=go)](https://github.com/lxzan/gws)
+[![go-version](https://img.shields.io/badge/go-%3E%3D1.18-30dff3?style=flat-square&logo=go)](https://github.com/marifcelik/gws)
 
 </div>
 
@@ -49,17 +49,17 @@ GOMAXPROCS=4, Connection=1000, CompressEnabled=false
 #### GoBench
 
 ```go
-go test -benchmem -run=^$ -bench . github.com/lxzan/gws
+go test -benchmem -run=^$ -bench . github.com/marifcelik/gws
 goos: linux
 goarch: amd64
-pkg: github.com/lxzan/gws
+pkg: github.com/marifcelik/gws
 cpu: AMD Ryzen 5 PRO 4650G with Radeon Graphics
 BenchmarkConn_WriteMessage/compress_disabled-12                  5263632               232.3 ns/op            24 B/op          1 allocs/op
 BenchmarkConn_WriteMessage/compress_enabled-12                     99663             11265 ns/op             386 B/op          1 allocs/op
 BenchmarkConn_ReadMessage/compress_disabled-12                   7809654               152.4 ns/op             8 B/op          0 allocs/op
 BenchmarkConn_ReadMessage/compress_enabled-12                     326257              3133 ns/op              81 B/op          1 allocs/op
 PASS
-ok      github.com/lxzan/gws    17.231s
+ok      github.com/marifcelik/gws    17.231s
 ```
 
 ### Index
@@ -104,7 +104,7 @@ ok      github.com/lxzan/gws    17.231s
 ### 安装
 
 ```bash
-go get -v github.com/lxzan/gws@latest
+go get -v github.com/marifcelik/gws@latest
 ```
 
 ### 事件
@@ -124,7 +124,7 @@ type Event interface {
 ```go
 package main
 
-import "github.com/lxzan/gws"
+import "github.com/marifcelik/gws"
 
 func main() {
 	gws.NewServer(&gws.BuiltinEventHandler{}, nil).Run(":6666")
@@ -140,7 +140,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/lxzan/gws"
+	"github.com/marifcelik/gws"
 )
 
 const (
@@ -198,7 +198,7 @@ package main
 
 import (
 	"log"
-	"github.com/lxzan/gws"
+	"github.com/marifcelik/gws"
 	kcp "github.com/xtaci/kcp-go"
 )
 
@@ -219,7 +219,7 @@ func main() {
 package main
 
 import (
-	"github.com/lxzan/gws"
+	"github.com/marifcelik/gws"
 	kcp "github.com/xtaci/kcp-go"
 	"log"
 )
@@ -249,7 +249,7 @@ package main
 
 import (
 	"crypto/tls"
-	"github.com/lxzan/gws"
+	"github.com/marifcelik/gws"
 	"golang.org/x/net/proxy"
 	"log"
 )
@@ -323,7 +323,7 @@ package main
 
 import (
     "github.com/lxzan/event_emitter"
-    "github.com/lxzan/gws"
+    "github.com/marifcelik/gws"
 )
 
 type Subscriber gws.Conn

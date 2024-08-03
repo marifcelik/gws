@@ -6,7 +6,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/lxzan/gws"
+	"github.com/marifcelik/gws"
 )
 
 func main() {

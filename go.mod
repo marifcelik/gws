@@ -1,4 +1,4 @@
-module github.com/lxzan/gws
+module github.com/marifcelik/gws
 
 go 1.18
 

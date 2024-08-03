@@ -3,7 +3,7 @@ package gws
 import (
 	"sync"
 
-	"github.com/lxzan/gws/internal"
+	"github.com/marifcelik/gws/internal"
 )
 
 type (

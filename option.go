@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/klauspost/compress/flate"
-	"github.com/lxzan/gws/internal"
+	"github.com/marifcelik/gws/internal"
 )
 
 const (

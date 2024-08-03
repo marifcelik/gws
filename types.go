@@ -11,7 +11,7 @@ import (
 	"runtime"
 	"unsafe"
 
-	"github.com/lxzan/gws/internal"
+	"github.com/marifcelik/gws/internal"
 )
 
 const frameHeaderSize = 14

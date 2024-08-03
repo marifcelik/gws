@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	klauspost "github.com/klauspost/compress/flate"
-	"github.com/lxzan/gws/internal"
+	"github.com/marifcelik/gws/internal"
 )
 
 //go:embed assets/github.json
