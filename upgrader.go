@@ -211,6 +211,7 @@ func (c *Upgrader) doUpgradeFromConn(netConn net.Conn, br *bufio.Reader, r *http
 		closed:            0,
 		writeQueue:        workerQueue{maxConcurrency: 1},
 		readQueue:         make(channel, c.option.ParallelGolimit),
+		ctx:               r.Context(),
 	}
 	if pd.Enabled {
 		socket.deflater = c.deflaterPool.Select()

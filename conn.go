@@ -3,13 +3,15 @@ package gws
 import (
 	"bufio"
 	"bytes"
+	"context"
 	"crypto/tls"
 	"encoding/binary"
-	"github.com/lxzan/gws/internal"
 	"net"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/lxzan/gws/internal"
 )
 
 type Conn struct {
@@ -31,6 +33,7 @@ type Conn struct {
 	dpsWindow         slideWindow       // 解压器滑动窗口
 	cpsWindow         slideWindow       // 压缩器滑动窗口
 	pd                PermessageDeflate // 压缩拓展协商结果
+	ctx               context.Context   // 上下文
 }
 
 // ReadLoop 循环读取消息. 如果复用了HTTP Server, 建议开启goroutine, 阻塞会导致请求上下文无法被GC.
