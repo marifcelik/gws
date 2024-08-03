@@ -36,6 +36,10 @@ type Conn struct {
 	ctx               context.Context   // 上下文
 }
 
+func (c *Conn) Context() context.Context {
+	return c.ctx
+}
+
 // ReadLoop 循环读取消息. 如果复用了HTTP Server, 建议开启goroutine, 阻塞会导致请求上下文无法被GC.
 // Read messages in a loop.
 // If HTTP Server is reused, it is recommended to enable goroutine, as blocking will prevent the context from being GC.
